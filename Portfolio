@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "poppins",sans-serif;
+    }
+    body{
+            background: linear-gradient(90deg,#031540,#06cc9a);
+
+    }
+
+    .container{
+        padding: 100px;
+        margin: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        position: relative;
+        height: 600px;
+        border: 2px solid rgba(255, 255,255, .1);
+        border-radius: 40px;
+        box-shadow: 0 0 30px #eeecec;
+        backdrop-filter:blur(30px);
+     }
+    
+
+    
+
+     
+    
+
+   
+
+    .header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10%;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    z-index: 100;
+
+
+    }
+
+    .logo{
+      font-size: 25px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+
+    }
+
+    .navbar a {
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 35px;
+      transition: .3s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active{
+      color: #072f8d;
+    }
+
+    .home{
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10%;
+      
+    }
+    .home-image{
+      display: flex;
+      justify-content: center;
+      padding-right: 25px;
+      align-items: center;
+      width: 400px;
+      height: 400px;
+      background: #031540;
+      border-radius: 50%;
+      border: 10px solid #fff;
+      outline: 10px solid #031540;
+    }
+
+    .home-image img{
+      position: relative;
+      bottom: 30px;
+      margin-left: 60px;
+      max-width: 400px;
+
+
+    }
+
+
+
+    .home-content{
+      max-width: 600px;
+      color: #fff;
+      text-align: right;
+
+
+    }
+    .home-content h1{
+      font-size: 55px;
+      line-height: 1.2;
+      color: rgb(175, 168, 71);
+      
+
+
+    }
+
+    .home-content h3{
+      font-size: 20px;
+      color: transparent;
+      -webkit-text-stroke: .5px #fff;
+      background-image: linear-gradient(#c4f000,#f00000);
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      background-position: -410px 0;
+      animation: animateText 6s linear infinite;
+    }
+
+
+    @keyframes animateText{
+
+      0%,
+      95%,
+      100% {
+        background-position: -410px 0;
+      }
+
+
+      65%,
+      85%{
+        background-position:0 0;
+      }
+    }
+
+    .home-content p{
+      font-size: 20px;
+      color: transparent;
+      -webkit-text-stroke: .5px #fff;
+      background-image: linear-gradient(#f0cc00,#f00000);
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      background-position: -410px 0;
+      animation: animateText 6s linear infinite;
+    }
+
+
+    @keyframes animateText{
+
+      0%,
+      95%,
+      100% {
+        background-position: -410px 0;
+      }
+
+
+      65%,
+      85%{
+        background-position:0 0;
+      }
+    }
+
+    .home-content p{
+      font-size: 16px;
+      margin-top: 20px;
+
+    }
+    .home-sci{
+      margin: 25px 0 40px;
+
+
+
+    }
+
+   .home-sci a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    margin-left: 12px;
+    transition: .5s;
+
+
+  }
+
+  .home-sci a:hover{
+    background: #00abf0;
+    color: #fff;
+    border-color: #00abf0;
+    box-shadow: 0 0 10px #00abf0;
+
+
+  }
+
+  .btn{
+    padding: 12px 35px;
+    background: #00abf0;
+    border-radius: 40px;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #00abf0;
+    transition: .5s;
+
+
+  }
+
+  .btn:hover{
+    box-shadow: none;
+
+  }
+
+        .about{
+          width: 80%;
+          margin: 50px auto;
+          padding: 30px;
+          border-radius: 20px;
+          background-color: rgba(255,255,255,0.1);
+          backdrop-filter: blur(15px);
+          border: 1px solid rgba(255,255,255,0.2);
+          box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .about h2{
+          text-align: center;
+          color: white;
+          margin-bottom: 20px;
+          font-size: 2rem;
+        }
+
+        .about p{
+          color: white;
+          font-size: 1.1rem;
+          line-height: 1.8;
+          text-align: justify;
+        }
+
+
+
+
+     .skills{
+      width: 80%;
+      margin: 50px auto;
+      padding: 25px;
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255,255, 0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+     }
+
+
+     .skills h2{
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+
+     }
+
+     .skill{
+      margin-bottom: 20px;
+
+     }
+
+     .skill p{
+      color: white;
+      margin-bottom: 8px;
+      font-weight: bold;
+     }
+
+     .progress-bar{
+      width: 100%;
+      height: 20px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50px;
+      overflow: hidden;
+     }
+
+     .progress{
+      height: 100%;
+      border-radius: 50px;
+      text-align: center;
+      line-height: 20px;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+     }
+
+     .html{
+      width: 90%;
+      background: linear-gradient(to right,#ff512f, #dd2476);
+     }
+
+     .css{
+      width: 85%;
+      background: linear-gradient(to right,#36d1dc,#5b86e5);
+     }
+
+     .js{
+      width: 75%;
+      background: linear-gradient(to right,#17971e,#ffd200);
+     }
+
+     .react{
+      width: 75%;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+     }
+
+     .node{
+      width: 75%;
+      background: linear-gradient(to right, #dd2476, #c4f000);
+     }
+
+     
+   .projects{
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+   }
+
+   .projects h2{
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2rem;
+   }
+
+   .project-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+   }
+
+   .project-card{
+    width: 280px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255,255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+  }
+
+
+  .project-card:hover{
+    transform: translateY(-10px);
+  }
+
+  .project-card h3{
+    color: white;
+    margin-bottom: 10px;
+
+  }
+
+  .project-card p{
+    color: white;
+    line-height: 1.6;
+  }
+
+  .project-card button{
+
+           background: linear-gradient(to right,#cfcc1d,#06cc9a);
+           color: wheat;
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        button:hover{
+            transform: translateY(-5px);
+            background-color: rgb(12, 129, 238);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7 );
+        }
+
+        button:active{
+            transform: scale(0.95);
+        }
+
+    
+
+  
+
+
+
+
+
+
+
+
+
+     
+
+    
+
+
+
+
+
+
+  
+  </style>
+
+
+         
+
+        
+         
+
+         
+        
+            
+
+        
+          
+          
+        
+
+</head>
+<body>
+    
+  <div class="container">
+
+    
+    <header class="header">
+      <a href="#" class="logo">Muzahid.</a>
+      
+      <nav class="navbar">
+        
+        <a href="#home" class="active">Home</a>
+       <a href="#about">About Me</a>
+             <a href="#skill">Skills</a>
+             <a href="#projects">Project</a>
+             <a href="#contact">Contact</a>
+             
+            </nav>
+            
+          </header>  
+          
+          <section class="home">
+            <div class="home-image">
+              <img src="muzahidbg.png" alt="" >
+            </div>
+            
+            
+            <div class="home-content">
+              <h1>Hi I'M MUZAHID</h1>
+              <h3>Full STACK WEB DEVELOPER</h3>
+              <p>I M  Currently Learning MERN Stack web Development and building real-world projects to strengthen my frontent and backend skill...</p>
+              
+        <div class="home-sci">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+        <a href="#" class="btn" download="my-resume">Download CV</a>
+        
+      </div>
+    </section>
+  </div>
+
+    
+    <main>
+      
+        <section class="about" id="about">
+          <h2>About me</h2>
+
+          <p>"Hi I'm Muzahid, a passionate MERN stack web developer learner. I enjoy building modern and responsive websites using HTML, CSS Java Script .
+            React js ,and other web techonologies. i am continuosly learning new skill. and improving my problem solving abilities to become a proffessional full stack web developer
+            "</p>
+          
+       
+        </section>
+   
+
+
+     <section class="skills" id="skill">
+      <h2>My Skill</h2>
+      <div class="skill">
+        <p>HTML</p>
+        <div class="progress-bar">
+          <div class="progress html">90%</div>
+        </div>
+      </div>
+
+
+
+      <div class="skill">
+         <p>CSS</p>
+         <div class="progress-bar">
+           <div class="progress css">85%</div>
+         </div>
+       </div>
+
+
+      <div class="skill">
+         <p>Java Script</p>
+         <div class="progress-bar">
+           <div class="progress js">85%</div>
+         </div>
+       </div>
+
+
+      <div class="skill">
+         <p>React Js</p>
+         <div class="progress-bar">
+           <div class="progress react">70%</div>
+         </div>
+       </div>
+
+      <div class="skill">
+         <p>Node.js</p>
+         <div class="progress-bar">
+           <div class=".node">30%</div>
+         </div>
+       </div>
+
+      <div class="skill">
+         <p>Express.js</p>
+         <div class="progress-bar">
+           <div class="Express">20%</div>
+         </div>
+       </div>
+
+      <div class="skill">
+         <p>Mango DB</p>
+         <div class="progress-bar">
+           <div class="mangu">30%</div>
+         </div>
+       </div>
+      </section>
+
+    
+    
+
+
+       
+       
+      
+
+
+
+
+     
+
+
+
+
+
+
+
+
+     
+
+    </main>
+    
+    
+    
+    
+    
+
+    
+</body>
+</html>
